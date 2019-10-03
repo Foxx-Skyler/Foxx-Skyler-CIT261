@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>DOM Manipulation</title>
+        <meta name="description" content="Learning about DOM Manipulation">
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="scripts/DOMManip.js"></script>
+    </head>
+
+    <body id="body">
+
+        <button id="colorchange" onclick='changeColor()'>DARK|LIGHT MODE</button>
+        
+        <h1 id="h1">DOM Monipulation: HTML & CSS</h1>
+        
+        <h2 id="h2">Math Flashcards</h2>
+        
+        <div id="card">
+            <p id="question">3 + 3 = </p>
+        </div>
+        
+        <button class="button" onclick='getAnswer()'>GET ANSWER</button>
+        
+        <button class="button" onclick='newQuestion()'>NEW QUESTION</button>
+        
+        <br><br>
+        <div id="cheat">
+        <p id="removeMe"><strong>HINT: The first answer is 6!</strong></p>
+        <button id="removeCheat" onclick='removeCheat()'>REMOVE CHEAT</button>
+        </div>
+            
+    </body>
+    
+</html>
