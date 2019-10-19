@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Weather</title>
+        <meta name="description" content="Learning about JS Events, CSS, and media">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/weather.css">
+        <script src="scripts/JSEvents.js"></script>
+    </head>
+
+    <body id="body">
+
+        <h1 id="weatherh1" ontouchstart='changeColor()'>Weather</h1>
+        <p>(Touch 'Weather' on touch screen to change color)</p>
+        
+        <canvas id="Canvas1" width="520" height="90" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.</canvas>
+            
+            <!-- Script for Canvas -->
+            <script>
+            var c = document.getElementById("Canvas1");
+            var ctx = c.getContext("2d");
+            ctx.font = "30px Arial";
+            ctx.strokeText("What kind of storm should we have?",10,50);
+            </script>
+        
+        <br>
+        
+        <button class="button" onclick='playHeavyR()'>Heavy Rain</button>
+        <div id="HeavyRain">
+        </div>
+        
+        <button class="button" onclick='playSnow()'>Snowfall</button>
+        <div id="Snowfall">
+        </div>
+        
+        <button class="button" onclick='playFire()'>Rain of Fire</button>
+        <div id="RainFire">
+        </div>
+        
+        <br>
+        <br>
+        
+        <canvas id="Canvas2" width="520" height="90" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.</canvas>
+            
+            <!-- Script for Canvas -->
+            <script>
+            var c = document.getElementById("Canvas2");
+            var ctx = c.getContext("2d");
+            ctx.font = "30px Arial";
+            ctx.strokeText("What music will suit this weather?",10,50);
+            </script>
+        
+        <p>Windancer</p>
+        <audio controls>
+            <source src ="media/Windancer.mp3">
+        </audio>
+        
+        <p>Carol of the Bells</p>
+        <audio controls>
+            <source src ="media/Carol%20Of%20The%20Bells.mp3">
+        </audio>
+        
+        <p>I See Fire</p>
+        <audio controls>
+            <source src ="media/I%20See%20Fire.mp3">
+        </audio>
+        
+        <br>
+        
+        <canvas id="Canvas3" width="550" height="90" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.</canvas>
+
+            <!-- Script for Canvas -->
+            <script>
+            var c = document.getElementById("Canvas3");
+            var ctx = c.getContext("2d");
+            ctx.font = "30px Arial";
+            ctx.strokeText("How does the weather affect our mood?",10,50);
+            </script>
+        
+        <video width = "480" height ="270" controls>
+        <source src = "media/How%20the%20weather%20affects%20our%20mood.mp4">
+        </video>
+        
+        <p>Video having trouble? Try this embedded YouTube link!</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6u0lhxYFjUI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+            
+    </body>
+    
+</html>
