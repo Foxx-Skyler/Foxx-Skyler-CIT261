@@ -1,0 +1,62 @@
+#HeavyRain {
+    display: none;
+    height: 100%;
+    background-color: black;
+    background-image: url('../images/rain.png');
+    animation: HeavyRain .3s linear infinite;
+    width: 100%;
+    height: 10em;
+}
+
+@keyframes HeavyRain{
+    0%{
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 35% -100%;
+    }
+    
+}
+
+#Snowfall {
+    display: none;
+    height: 100%;
+    background-color: darkblue;
+    background-image: url('../images/Snow.png');
+    animation: Snowfall 1s linear infinite;
+    width: 100%;
+    height: 10em;
+}
+
+@keyframes Snowfall{
+    0%{
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 0% -150%;
+    }
+    
+}
+
+#RainFire {
+    display: none;
+    height: 100%;
+    background-color: darkred;
+    background-image: url('../images/Fire.png');
+    animation: RainFire 1s linear infinite;
+    width: 100%;
+    height: 10em;
+}
+
+@keyframes RainFire{
+    0%{
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 63% -260%;
+    }
+    
+}
+
+
+
