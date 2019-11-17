@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Local Storage</title>
+        <meta name="description" content="Learning about Local Storage">
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="scripts/LocStorage.js"></script>
+    </head>
+
+    <body>
+
+        <h1>Local Storage</h1>
+        
+        <div id="chaForm">
+        
+            <h2>Create your own Character!</h2>
+
+            <form name="characterSheet">
+
+            <h3>Name</h3>
+            <input id="inpName" type="text" name ="name">
+
+            <h3>Age</h3>
+            <input id="inpAge" type="text" name ="age">
+
+            <h3>Species</h3>
+            <input id="inpSpecies" type="text" name ="species">
+
+            <h3>Class</h3>
+            <input id="inpClass" type="text" name ="class">
+
+            </form>
+            <button type = "button" id="btnInsert" onclick="locStorage()">Create Character</button>
+            <br>
+            <button type = "button" id="btnInsert" onclick="getStorage()">Load Prior Character</button>
+            
+        </div>
+        
+        <div id="charResults">
+            
+            <h1>Character Results!</h1>
+
+            <h3>Name:</h3>
+            <p id="ansName"></p>
+
+            <h3>Age</h3>
+            <p id="ansAge"></p>
+
+            <h3>Species</h3>
+            <p id="ansSpecies"></p>
+
+            <h3>Class</h3>
+            <p id="ansClass"></p>
+            
+        </div>
+        
+    </body>
+    
+</html>
