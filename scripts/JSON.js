@@ -1,6 +1,6 @@
 function getJSON(){
     var request = new XMLHttpRequest();
-    request.open('GET', 'https://therpgplayer.github.io/Skyler-Fluency/scripts/cartoon-list.json');
+    request.open('GET', 'https://foxx-skyler.github.io/Foxx-Skyler-CIT261/scripts/cartoon-list.json');
     request.onload = function(){
         var data = JSON.parse(request.responseText);
         var myJSON = JSON.stringify(request.responseText);
