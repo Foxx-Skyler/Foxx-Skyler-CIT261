@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Mickey",
+    "species" : "mouse",
+    "company" : "Disney"
+  },
+  {
+    "name": "Bugs",
+    "species" : "bunny",
+    "company" : "Warner Bros"
+  },
+  {
+    "name": "Spongebob",
+    "species" : "sea creature",
+    "company" : "Nickelodean"
+  },
+  {
+    "name": "Dexter",
+    "species" : "boy genius",
+    "company" : "Cartoon Network"
+  }
+]
