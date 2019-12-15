@@ -11,6 +11,24 @@
 #chooseProfileMobile h3 { display: none; }
 #ChooseMobileH3 { display: none; }
 
+
+/* Sets background image for header */
+
+#PageLogo{
+    background-image: url('../images/MapBackground.jpg');
+    animation: PageLogo 15s linear infinite;
+}
+
+@keyframes PageLogo{
+    0%{
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 208% 0%;
+    }
+    
+}
+
 body{
 
     /* Set default font for the body text*/
@@ -33,34 +51,20 @@ main {
     background-color: lightgray;
 }
 
-/* Sets background image for header */
 
-#PageLogo{
-    background-image: url('../images/MapBackground.jpg');
-    animation: PageLogo 15s linear infinite; */
-    margin: auto;
-}
-
-@keyframes PageLogo{
-    0%{
-        background-position: 0% 0%;
-    }
-    100%{
-        background-position: 208% 0%;
-    }
-    
+#randoDice{
+    transition: 0.5s;
 }
 
 #randoDice:hover{
     opacity: 55%;
     border: 3px solid white;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 #randoDice{
     animation: randoDiceTwirl 1s infinite ease-in-out;
-    animation-play-state: initial;
-    animation-play-state: paused, running;
+    animation-play-state: paused;
 }
 
 @keyframes randoDiceTwirl{
@@ -68,8 +72,6 @@ main {
         transform: rotateZ(0deg);
     }
     100%{
-        opacity: 100%;
-        border: none;
         transform: rotateZ(720deg);
 /*
     animation-play-state: initial;
@@ -81,6 +83,7 @@ main {
 
 
 /*Sets logo image size and position*/
+
 
 header img{
     margin: auto;
