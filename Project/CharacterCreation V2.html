@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Character Creation</title>
+        <meta name="description" content="Character Creation">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/medium.css">
+        <link rel="stylesheet" href="styles/small.css">
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/GenerateName.js"></script>
+        <script src="https://rawgit.com/vuejs/vue/master/dist/vue.js"></script>
+        <script src="scripts/LocStorage.js"></script>
+    </head>
+
+    <body>
+
+        <div id="PageLogo"><a href="CharacterCreation%20V2.html"><img src="images/CharCreatLogo.png" alt="Character Creation" width="100%"></a></div>
+        
+        <main>
+            
+        <div id="chaForm">
+            
+            <h1>Create your own Character!</h1>
+
+            <form name="characterSheet">
+                
+            <h3>Name</h3>
+            <input id="inpName" type="text" name ="name">
+
+            <h3>Age</h3>
+            <input id="inpAge" type="text" name ="age">
+
+            <h3>Species</h3>
+            <input id="inpSpecies" type="text" name ="species">
+
+            <h3>Class</h3>
+            <input id="inpClass" type="text" name ="class">
+                
+            <h3>Strength</h3>
+            <input id="inpStren" type="text" name ="strength">
+                
+            <h3>Dexterity</h3>
+            <input id="inpDext" type="text" name ="dexterity">
+                
+            <h3>Constitution</h3>
+            <input id="inpConst" type="text" name ="constitution">
+                
+            <h3>Intelligence</h3>
+            <input id="inpIntell" type="text" name ="intelligence">
+                
+                <!--
+                
+            <h3>Wisdom</h3>
+            <input id="inpWisd" type="text" name ="class">
+                
+            <h3>Charisma</h3>
+            <input id="inpCharisma" type="text" name ="class">
+            -->
+            
+            </form>
+            
+            <div id="formRightSide">
+                <h3>Auto-Generate Character</h3>
+                <img id="randoDice" src="images/Dice.png" onclick="generateName();return false;">
+                <br>    
+                <button onclick="generateName();return false;">Auto-Generate</button>
+                <br>
+                <h2>Tutorial Video (Placeholder)</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/AjWfY7SnMBI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br><br><br>
+                
+            </div>
+            
+            <button type = "button" id="btnInsert" onclick="locStorage()">Create Character</button>
+            <br>
+            <button type = "button" id="btnInsert" onclick="getStorage()">Load Prior Character</button>
+            
+        </div>
+            
+
+            
+        <div id="charResults">
+            
+            <h1>Character Results!</h1>
+            
+            <div id="ChooseProfile">
+            <h2>Import a Profile Image</h2>
+            
+            <!-- FILE IMPORTING START -->
+                
+                <div class="app">
+                  <div v-if="!image">
+                    <input type="file" @change="onFileChange">
+                  </div>
+                  <div class="customImage" v-else>
+                        <img :src="image" />
+                        <br>
+                        <button @click="removeImage">Remove image</button>
+                </div>
+                </div>
+
+            <script>
+                new Vue({
+                  el: '.app',
+                  data: {
+                    image: ''
+                  },
+                  beforeMount(){
+                      var vm = this
+                      vm.get('img')
+                  },
+                  methods: {
+                    get(key) {
+
+                        this.image=localStorage.getItem(key);
+                    },
+                    set(key) {
+                      var vm = this
+                      try{
+
+                          localStorage.setItem(key,this.image);
+                      }
+                      catch(e) {
+                          console.log('Storage failed: ${e}');
+                      }
+                    },
+                    onFileChange(e) {
+                      var files = e.target.files || e.dataTransfer.files;
+                      if (!files.length)
+                        return;
+                      this.createImage(files[0]);
+                    },
+                    createImage(file) {
+                      var image = new Image();
+                      var reader = new FileReader();
+                      var vm = this;
+
+                      reader.onload = (e) => {
+                        vm.image = e.target.result;
+                        vm.set('img');
+                      };
+                      reader.readAsDataURL(file);
+                    },
+                    removeImage: function (e) {
+                      this.image = '';
+                      localStorage.removeItem('img')
+                    }
+                  }
+                })
+            </script>
+
+            <!-- End JavaScript -->
+            </div>
+                
+            <!-- FILE IMPORTING ENDED -->
+            
+            <h3>Name:</h3>
+            <p id="ansName"></p>
+
+            <h3>Age</h3>
+            <p id="ansAge"></p>
+
+            <h3>Species</h3>
+            <p id="ansSpecies"></p>
+
+            <h3>Class</h3>
+            <p id="ansClass"></p>
+            
+            <h3>Strength</h3>
+            <p id="ansStren"></p>
+            
+            <h3>Dexterity</h3>
+            <p id="ansDext"></p>
+                
+            <h3>Constitution</h3>
+            <p id="ansConst"></p>
+                
+            <h3>Intelligence</h3>
+            <p id="ansIntell"></p>
+            
+        </div>
+            
+        <br><br>
+        </main>
+        
+    </body>
+    
+</html>

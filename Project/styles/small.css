@@ -1,0 +1,165 @@
+@media only screen and (max-width: 50em) {
+  /* Only CSS rules that need to be changed to meet the layout needs from small to medium go in here */
+
+/* This main css file contains the default rules and is geared toward the small/phone view */
+
+* { box-sizing: border-box;}  /* This wildcard applies to all elements ensuring a box layout model */
+
+html,body {
+    width: 100%;
+	margin-left; center;
+	padding:0px;
+    display: middle;
+}
+
+header, nav, main, footer { /* the comma means apply the following CSS declarations to all of the listed elements */
+  /* Declare the maximum width and other main element rules to limit the stretch on wide views */
+}
+
+header img{
+    margin: auto;
+    width: 400px;
+    margin-bottom: 10px;
+}
+    
+nav li{
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+    padding-top: 36px;
+    padding-bottom: 0px;
+}
+    
+nav {
+    text-align: center;
+    margin-top: -55px;
+    margin-bottom: 25px;
+}
+
+main h1 {
+	font-family: "Arial Black", Gadget, sans-serif;
+    text-align: center;
+}
+
+main h2 {
+	font-family: "Arial Black", Gadget, sans-serif;
+    text-align: center;
+}
+
+main h3 {
+    padding-left: 0px;
+    text-align: center;
+}
+
+figure {
+    margin: 0px;
+    margin-top: 20px;
+    text-align: center;
+}
+    
+#seriesfig{
+    width: 320px;
+    color: #009cff;
+    font-size: 1em;
+    margin-top: -15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+
+#videocaption {
+    text-align: center;
+    width: 320px;
+    font-size: 1em;
+    padding-top: 0px;
+    padding-bottom: 35px;
+}
+    
+figure iframe {
+    max-width: 336px;
+    max-height: 188px;
+}
+    
+#rightfig{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    bottom: 0px;
+}
+    
+#leftfig{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    bottom: 0px;
+}
+
+figcaption{
+    width: 230px;
+    color: #009cff;
+    font-size: 1em;
+    margin-top: -5px;
+    padding-top: 20px;
+}
+
+#aboutback figcaption{
+    width: 335px;
+    text-align: center;
+}
+
+/* Footer Styling */
+
+footer {
+    margin-top: 5px;
+    text-align: center;
+    position:absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 235px;
+}
+    
+#socialcopyright img{
+    width: 70px;
+    display: inline-block;
+    margin: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+    
+form {
+    display: block;
+    text-align: left;
+    padding-top: 1em;
+    padding-bottom: .2em;
+    padding-left: 2em;
+}
+    
+/*Hamburger display*/
+
+.hamburger {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+
+}
+
+#ChooseProfile { list-style: none; padding-left: 0; }
+#ChooseProfile li { display: none; }
+#ChooseProfile h3 { display: none; }
+
+#ChooseMobileH3 { display: block; }
+    
+.chooseProfileMobile.responsive { position: relative; }
+.chooseProfileMobile.responsive li {font-size: 1.2em; color: #ffffff; background-color: #111111; display: block; width: 100%; margin: 2px 0px;}
+.chooseProfileMobile.responsive li a {text-align: right;  display: block; text-decoration:none; }
+.chooseProfileMobile.responsive li a:hover { color: #ffffff;}
+li a {
+color: #E93D68;
+    
+    
+    
+/* Other Class Selectors */
+    
+    

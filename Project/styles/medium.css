@@ -1,0 +1,158 @@
+@media only screen and (max-width: 72em) {
+  /* Only CSS rules that need to be changed to meet the layout needs from small to medium go in here */
+
+
+body{
+
+    /* Set default font for the body text*/
+    font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+    font-size: 1.10em;
+    
+    /* Set width size for the body of the site */
+    width: 700px;
+    
+    /* Centers text and page */
+    text-align: center;
+    margin: auto;
+    
+    /* Sets background color for body */
+    background-color: white;
+
+}
+
+main {
+}
+
+/* Sets background image for header */
+
+header{
+    background-image: url(../images/Banner.jpg);
+    margin: auto;
+}
+
+header, nav, main, footer { /* the comma means apply the following CSS declarations to all of the listed elements */
+  /* Declare the maximum width and other main element rules to limit the stretch on wide views */
+}
+
+header img{
+    margin: auto;
+    width: 400px;
+    margin-bottom: -15px;
+}
+
+main h1 {
+	font-family: "Arial Black", Gadget, sans-serif;
+    text-align: center;
+}
+
+main h2 {
+	font-family: "Arial Black", Gadget, sans-serif;
+    text-align: center;
+}
+
+main h3 {
+    padding-left: 0px;
+    text-align: center;
+}
+
+figure {
+    margin: 0px;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+    
+#seriesfig{
+    width: 320px;
+    color: #009cff;
+    font-size: 1em;
+    margin-top: -15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+
+#videocaption {
+    text-align: center;
+    width: 320px;
+    font-size: 1em;
+    padding-top: 0px;
+    padding-bottom: 35px;
+}
+    
+figure iframe {
+    max-width: 437px;
+    max-height: 244px;
+}
+    
+#rightfig{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    bottom: 0px;
+}
+    
+#leftfig{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    bottom: 0px;
+}
+
+figcaption{
+    width: 330px;
+    color: #009cff;
+    font-size: 1em;
+    margin-top: -5px;
+    padding-top: 20px;
+}
+
+#aboutback figcaption{
+    width: 300px;
+    text-align: left;
+}
+
+#ChooseProfile {
+    width: 75%;
+    display: inline-block;
+    text-align: center;
+}
+    
+/* Footer Styling */
+
+footer {
+    margin-top: 5px;
+    text-align: center;
+    position:absolute;
+    left: 0;
+    right: 0;
+}
+
+    
+form {
+    width: 0%;
+    display: block;
+    text-align: left;
+    padding-top: 1em;
+    padding-bottom: .2em;
+    padding-left: 3em;
+}
+    
+    
+/*Hamburger display*/
+
+.hamburger {
+    display: none;
+
+}
+
+#HeadNav { list-style: none; padding-left: 0; height: 0px;}
+#HeadNav li { display: none; }
+
+.smallnav.responsive { position: relative; }
+.smallnav.responsive li {font-size: 1.2em; color: #ffffff; background-color: #111111; display: block; width: 100%; margin: 2px 0;}
+.smallnav.responsive li a {text-align: right;  display: block; text-decoration:none; }
+.smallnav.responsive li a:hover { color: #ffffff;}
+li a {
+color: #E93D68;

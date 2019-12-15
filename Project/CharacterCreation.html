@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Character Creation</title>
+        <meta name="description" content="Character Creation">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/medium.css">
+        <link rel="stylesheet" href="styles/small.css">
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/LocStorage.js"></script>
+    </head>
+
+    <body>
+
+        <div id="PageLogo"><a href="CharacterCreation.html"><img src="images/CharCreatLogo.png" alt="Character Creation" width="100%"></a></div>
+        
+        <main>
+            
+        <div id="chaForm">
+        
+            <h2>Create your own Character!</h2>
+
+            <form name="characterSheet">
+
+            <h3>Name</h3>
+            <input id="inpName" type="text" name ="name">
+
+            <h3>Age</h3>
+            <input id="inpAge" type="text" name ="age">
+
+            <h3>Species</h3>
+            <input id="inpSpecies" type="text" name ="species">
+
+            <h3>Class</h3>
+            <input id="inpClass" type="text" name ="class">
+                
+            <h3>Strength</h3>
+            <input id="inpStren" type="text" name ="strength">
+                
+            <h3>Dexterity</h3>
+            <input id="inpDext" type="text" name ="dexterity">
+                
+            <h3>Constitution</h3>
+            <input id="inpConst" type="text" name ="constitution">
+                
+            <h3>Intelligence</h3>
+            <input id="inpIntell" type="text" name ="intelligence">
+                
+                <!--
+                
+            <h3>Wisdom</h3>
+            <input id="inpWisd" type="text" name ="class">
+                
+            <h3>Charisma</h3>
+            <input id="inpCharisma" type="text" name ="class">
+            -->
+            
+            </form>
+            
+            <div id="ChooseProfile">
+            <nav>
+            <h3>Choose a Profile</h3>
+            
+            <!-- FILE IMPORTING START -->
+            
+            <h3>(Or Import your own image)</h3>
+
+            <style>
+              .thumb {
+                height: 200px;
+                border: 1px solid #000;
+              }
+            </style>
+
+            <input type="file" id="files" name="files[]" multiple />
+            <output id="list"></output>
+
+            <script>
+              function handleFileSelect(evt) {
+                var files = evt.target.files; // FileList object
+
+                // Loop through the FileList and render image files as thumbnails.
+                for (var i = 0, f; f = files[i]; i++) {
+
+                  // Only process image files.
+                  if (!f.type.match('image.*')) {
+                    continue;
+                  }
+
+                  var reader = new FileReader();
+
+                  // Closure to capture the file information.
+                  reader.onload = (function(theFile) {
+                    return function(e) {
+                      // Render thumbnail.
+                      var span = document.createElement('span');
+                      span.innerHTML = ['<img class="thumb" src="', e.target.result,
+                                        '" title="', escape(theFile.name), '"/>'].join('');
+                      document.getElementById('list').insertBefore(span, null);
+                    };
+                  })(f);
+
+                  // Read in the image file as a data URL.
+                  reader.readAsDataURL(f);
+                }
+              }
+
+              document.getElementById('files').addEventListener('change', handleFileSelect, false);
+            </script>
+                
+            <!-- FILE IMPORTING ENDED -->
+                
+            <ul class="ChooseProfile">
+                <li onclick="imageSelect1()" id="Actor1"><img src="images/Actor1.jpg"></li>
+                <li id="Actor2"><img src="images/Actor2.jpg"></li>
+                <li id="Actor3"><img src="images/Actor3.jpg"></li>
+                <li id="Actor4"><img src="images/Actor4.jpg"></li>
+                <li id="Actor5"><img src="images/Actor5.jpg"></li>
+                <li id="Actor6"><img src="images/Actor6.jpg"></li>
+                <li id="Actor7"><img src="images/Actor7.jpg"></li>
+                <li id="Actor8"><img src="images/Actor8.jpg"></li>
+                <li id="Actor9"><img src="images/Actor9.jpg"></li>
+                <li id="Actor10"><img src="images/Actor10.jpg"></li>
+                <li id="Actor11"><img src="images/Actor11.jpg"></li>
+                <li id="Actor12"><img src="images/Actor12.jpg"></li>
+                <li id="Actor13"><img src="images/Actor13.jpg"></li>
+                <li id="Actor14"><img src="images/Actor14.jpg"></li>
+                <li id="Actor15"><img src="images/Actor15.jpg"></li>
+                <li id="Actor16"><img src="images/Actor16.jpg"></li>
+                <li id="Actor17"><img src="images/Actor17.jpg"></li>
+                <li id="Actor18"><img src="images/Actor18.jpg"></li>
+                <li id="Actor19"><img src="images/Actor19.jpg"></li>
+                <li id="Actor20"><img src="images/Actor20.jpg"></li>
+            </ul>
+            </nav>
+            </div>
+            
+            
+            <!-- Mobile Version of Choosing a Profile -->
+            <div id="ChooseProfileMobile">
+            <nav><br>
+            <h3 id="ChooseMobileH3">Choose a Profile</h3>
+            <button class="hamburger" onclick="toggleNavMenu()">&#9776;</button>
+            <ul class="chooseProfileMobile">
+                <li><img src="images/Actor1.jpg"></li>
+                <li><img src="images/Actor2.jpg"></li>
+                <li><img src="images/Actor3.jpg"></li>
+                <li><img src="images/Actor4.jpg"></li>
+                <li><img src="images/Actor5.jpg"></li>
+                <li><img src="images/Actor6.jpg"></li>
+                <li><img src="images/Actor7.jpg"></li>
+                <li><img src="images/Actor8.jpg"></li>
+                <li><img src="images/Actor9.jpg"></li>
+                <li><img src="images/Actor10.jpg"></li>
+                <li><img src="images/Actor11.jpg"></li>
+                <li><img src="images/Actor12.jpg"></li>
+                <li><img src="images/Actor13.jpg"></li>
+                <li><img src="images/Actor14.jpg"></li>
+                <li><img src="images/Actor15.jpg"></li>
+                <li><img src="images/Actor16.jpg"></li>
+                <li><img src="images/Actor17.jpg"></li>
+                <li><img src="images/Actor18.jpg"></li>
+                <li><img src="images/Actor19.jpg"></li>
+                <li><img src="images/Actor20.jpg"></li>
+            </ul>
+            </nav>
+            </div>
+            
+            
+            <button type = "button" id="btnInsert" onclick="locStorage()">Create Character</button>
+            <br>
+            <button type = "button" id="btnInsert" onclick="getStorage()">Load Prior Character</button>
+            
+        </div>
+        
+        <div id="charResults">
+            
+            <h1>Character Results!</h1>
+
+            <h3>Name:</h3>
+            <p id="ansName"></p>
+
+            <h3>Age</h3>
+            <p id="ansAge"></p>
+
+            <h3>Species</h3>
+            <p id="ansSpecies"></p>
+
+            <h3>Class</h3>
+            <p id="ansClass"></p>
+            
+            <h3>Strength</h3>
+            <p id="ansStren"></p>
+            
+            <h3>Dexterity</h3>
+            <p id="ansDext"></p>
+                
+            <h3>Constitution</h3>
+            <p id="ansConst"></p>
+                
+            <h3>Intelligence</h3>
+            <p id="ansIntell"></p>
+            
+        </div>
+            
+        <br><br>
+        </main>
+        
+    </body>
+    
+</html>

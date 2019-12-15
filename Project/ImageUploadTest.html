@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="description" content="Skyler Foxx - Website">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/medium.css">
+        <link rel="stylesheet" href="styles/small.css">
+        <script src="scripts/hamburger.js"></script>
+        <title>Skyler Foxx | Home Page</title>
+    </head>
+
+    <body>
+        
+        
+        <div id="app">
+          <div v-if="!image">
+            <h2>Select an image</h2>
+            <input type="file" @change="onFileChange">
+          </div>
+          <div v-else>
+            <img :src="image" />
+            <button @click="removeImage">Remove image</button>
+          </div>
+        </div>
+        
+        <style>
+            #app {
+              text-align: center;
+            }
+            img {
+              width: 30%;
+              margin: auto;
+              display: block;
+              margin-bottom: 10px;
+            }
+            button {
+
+            }
+        
+        </style>
+        
+        <!-- Calls Vue JS -->
+        
+        <script src="https://rawgit.com/vuejs/vue/master/dist/vue.js"></script>
+        
+        <!-- Other JavaScript -->
+        
+        <script>
+            
+        new Vue({
+          el: '#app',
+          data: {
+            image: ''
+          },
+          beforeMount(){
+              var vm = this
+              console.log('before Mounted')
+              vm.get('img')
+          },
+          methods: {
+            get(key) {
+                
+                this.image=localStorage.getItem(key);
+            },
+            set(key) {
+              var vm = this
+              try{
+                  
+                  localStorage.setItem(key,this.image);
+              }
+              catch(e) {
+                  console.log('Storage failed: ${e}');
+              }
+            },
+            onFileChange(e) {
+              var files = e.target.files || e.dataTransfer.files;
+              if (!files.length)
+                return;
+              this.createImage(files[0]);
+            },
+            createImage(file) {
+              var image = new Image();
+              var reader = new FileReader();
+              var vm = this;
+
+              reader.onload = (e) => {
+                vm.image = e.target.result;
+                vm.set('img');
+              };
+              reader.readAsDataURL(file);
+            },
+            removeImage: function (e) {
+              this.image = '';
+              localStorage.removeItem('img')
+            }
+          }
+        })
+        
+        </script>
+        
+        <!-- End JavaScript -->
+        
+        <footer>
+            
+            <p>&copy; Skyler Foxx 2019</p>
+            
+        </footer>
+    
+    </body>
+        
+</html>
