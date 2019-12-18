@@ -83,9 +83,14 @@ form {
 input
 {
     width: 25em;
-    height: 15em;
+    height: 7em;
     margin: auto;
     text-align: center;
+}
+    
+input[type="text"]
+{
+    font-size:24px;
 }
     
 #chaForm {
