@@ -12,7 +12,7 @@ html,body {
 	margin-left; center;
 	padding:0px;
     display: middle;
-    font-size: 2em;
+    font-size: 1.2em;
 }
 
 header, nav, main, footer { /* the comma means apply the following CSS declarations to all of the listed elements */
@@ -75,15 +75,17 @@ footer {
 }
    
 form {
-    width: 70%;
+    width: 100%;
     margin: auto;
     padding-left: 0em;
 }
     
 input
 {
-	width: 70%;
-	margin: auto;
+    width: 125em;
+    height: 25em;
+    margin: auto;
+    text-align: center;
 }
     
 #chaForm {
