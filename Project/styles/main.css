@@ -60,7 +60,234 @@ body{
     100%{
         background-position: 208% 0%;
     }
+    /* Sets background image for header */
+
+#PageLogo{
+    background-image: url('../images/MapBackground.jpg');
+    animation: PageLogo 15s linear infinite;
+}
+
+@keyframes PageLogo{
+    0%{
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 208% 0%;
+    }
     
+}
+
+body{
+
+    /* Set default font for the body text*/
+    font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+    font-size: 1.10em;
+    
+    
+    /* Set width size for the body of the site */
+    width: 1000px;
+    
+    /* Centers text and page */
+    text-align: center;
+    margin: auto;
+    
+    /* Sets background color for body */
+    background-color: white;
+
+}
+
+main {
+    background-color: lightgray;
+}
+
+input[type="text"]
+{
+    font-size:16px;
+}
+
+#randoDice{
+    transition: 0.5s;
+}
+
+#randoDice:hover{
+    opacity: 55%;
+    border: 3px solid white;
+    transition: 0.3s;
+}
+
+#randoDice{
+    animation: randoDiceTwirl 1s infinite ease-in-out;
+    animation-play-state: paused;
+}
+
+@keyframes randoDiceTwirl{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(720deg);
+/*
+    animation-play-state: initial;
+    animation-play-state: paused;
+*/
+    }
+}
+
+
+
+/*Sets logo image size and position*/
+
+
+header img{
+    margin: auto;
+    width: 600px;
+    margin-bottom: -20px;
+}
+
+/* Styles header text */
+
+h1,h2,h3,h4,h5,h6{
+    color: #ba9556;
+	font-family: "Arial Black", Gadget, sans-serif;
+}
+
+/* Styles the header navigation bar by setting font size, position, and border */
+
+#HeadNav {
+    font-size: 1.2em;
+    list-style-type: none;
+    margin-top: -5px;
+    padding: 0px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 5px 0px 5px 0px;
+}
+
+/* Centers the navigational text */
+
+nav li{
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Styles the navigation links according to user interactivity */
+
+nav ul li :link{
+    color: #009cff;
+    text-decoration: none
+}
+
+nav ul li :visited{
+    color: #009cff;
+    text-decoration: none
+}
+
+nav ul li :hover{
+    color: #ffffff;
+    text-decoration: none
+}
+
+nav ul li :active{
+    color: #ffcc00;
+    text-decoration: none
+}
+
+/* Styles any links according to user interactivity */
+
+a li :link{
+    color: #009cff;
+    text-decoration: none
+}
+
+a li :visited{
+    color: #009cff;
+    text-decoration: none
+}
+
+a li :hover{
+    color: #ffffff;
+    text-decoration: none
+}
+
+a li :active{
+    color: #ffcc00;
+    text-decoration: none
+}
+
+/* Styles the footer */
+
+footer{
+    color: black;
+    /* Sets background color, border, and position of footer */
+    border-style: solid;
+    border-color: #ffffff;
+    background-color: #ba9556;
+    border-width: 5px 0px 0px 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 1em;
+}
+
+/* Styles the social media icons */
+
+#socialcopyright img{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Styles the copyright mark */
+
+form {
+    width: 90%;
+    display: block;
+    text-align: left;
+    padding-top: 1em;
+    padding-bottom: .2em;
+    padding-left: 3em;
+}
+
+
+
+#ChooseProfile {
+    width: 65%;
+    display: inline-block;
+    text-align: center;
+    margin-top: 0em;
+}
+
+span {
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+#formRightSide {
+    text-align: center;
+    margin: auto;
+    padding-left: 24em;
+    margin-top: -45em;
+}
+
+#charResults {
+    display: none;
+}
+
+#bannerImg {
+    width: 50%;
+    margin: auto;
+}
+
+button {
+    font-size: 14px;
+    border-radius: 4px;
+    background-color: white;
+    border: 2px solid #e7e7e7
+}
+
+.app img {
+    width: 50%;
+    margin: auto;
+}
+
 }
 
 body{
