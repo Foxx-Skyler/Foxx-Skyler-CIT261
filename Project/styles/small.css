@@ -12,7 +12,7 @@ html,body {
 	margin-left; center;
 	padding:0px;
     display: middle;
-    font-size: 1.2em;
+    font-size: 1.15em;
 }
 
 header, nav, main, footer { /* the comma means apply the following CSS declarations to all of the listed elements */
@@ -56,14 +56,16 @@ main h3 {
 
 /* Footer Styling */
 
-footer {
-    margin-top: 5px;
-    text-align: center;
-    position:absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 65px;
+footer{
+    color: black;
+    /* Sets background color, border, and position of footer */
+    border-style: solid;
+    border-color: #ffffff;
+    background-color: #ba9556;
+    border-width: 5px 0px 0px 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 1em;
 }
     
 #socialcopyright img{
@@ -75,22 +77,22 @@ footer {
 }
    
 form {
-    width: 100%;
+    width: 65%;
     margin: auto;
     padding-left: 0em;
 }
     
 input
 {
-    width: 25em;
-    height: 7em;
+    width: 18em;
+    height: 2em;
     margin: auto;
     text-align: center;
 }
     
 input[type="text"]
 {
-    font-size:24px;
+    font-size:36px;
 }
     
 #chaForm {
@@ -109,6 +111,10 @@ input[type="text"]
     margin: auto;
     padding-left: 0em;
     margin-top: 0em;
+}
+    
+button {
+    font-size: 36px;
 }
 
 iframe {
