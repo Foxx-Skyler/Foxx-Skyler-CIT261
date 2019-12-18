@@ -55,64 +55,6 @@ main h3 {
     text-align: center;
 }
 
-figure {
-    margin: 0px;
-    margin-top: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-    text-align: center;
-}
-    
-#seriesfig{
-    width: 320px;
-    color: #009cff;
-    font-size: 1em;
-    margin-top: -15px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 20px;
-}
-
-#videocaption {
-    text-align: center;
-    width: 320px;
-    font-size: 1em;
-    padding-top: 0px;
-    padding-bottom: 35px;
-}
-    
-figure iframe {
-    max-width: 437px;
-    max-height: 244px;
-}
-    
-#rightfig{
-    width: 100%;
-    display: inline-block;
-    position: relative;
-    bottom: 0px;
-}
-    
-#leftfig{
-    width: 100%;
-    display: inline-block;
-    position: relative;
-    bottom: 0px;
-}
-
-figcaption{
-    width: 330px;
-    color: #009cff;
-    font-size: 1em;
-    margin-top: -5px;
-    padding-top: 20px;
-}
-
-#aboutback figcaption{
-    width: 300px;
-    text-align: left;
-}
-
 #ChooseProfile {
     width: 75%;
     display: inline-block;
@@ -139,6 +81,17 @@ form {
     padding-left: 3em;
 }
     
+#formRightSide {
+    text-align: center;
+    margin: auto;
+    padding-left: 14em;
+    margin-top: -45em;
+}
+
+iframe {
+    width: 420px;
+    height: 235px;
+}
     
 /*Hamburger display*/
 
