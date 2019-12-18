@@ -5,9 +5,10 @@ function generateName(){
     var spinStop;
     spinStop = setTimeout(stopDice, 1000);
     
+    var nameNumber = Math.floor(Math.random() * 38);
     var randomNumber = Math.floor(Math.random() * 6);
     
-	var nameList = ["Roger","Joseph","Marcus","Arthur","Trover","Terra","Matthew"];
+	var nameList = ["Roger","Joseph","Marcus","Arthur","Trover","Terra","Matthew","Luke","Legolas","Aragorn","Gimley","Frodo","Samuel","Gabriel","Harry","Ronald","Porkins","Biggs","Wedge","Rebecca","Janette","Malory","Abigail","Telly","Tiffany","Melissa","Laura","Laurel","Auburn","Gwen","Freya","Samantha","Gabriella","Hilary","Rose","Patricia","Bethany","Winry"];
     
     //Elves can live up to 700. Gnomes can live up to 400. Dwarves up to 350. Orcs live up to 35. Half-Orc up to 70.
     
@@ -26,7 +27,7 @@ function generateName(){
     
     var classList = ["Barbarian","Bard","Cleric","Druid","Fighter","Monk","Paladin","Ranger","Rogue","Sorcerer","Warlock","Wizard"];
     
-    var Charname = nameList[randomNumber];
+    var Charname = nameList[nameNumber];
     var Charspecies = speciesList[randomNumber];
     var Charclass = classList[randomNumber];
     
