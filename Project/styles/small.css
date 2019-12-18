@@ -18,6 +18,10 @@ header, nav, main, footer { /* the comma means apply the following CSS declarati
   /* Declare the maximum width and other main element rules to limit the stretch on wide views */
 }
 
+h3 {
+    font-size: 150%;
+}
+	
 header img{
     margin: auto;
     width: 400px;
