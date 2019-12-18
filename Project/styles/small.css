@@ -18,12 +18,6 @@ html,body {
 header, nav, main, footer { /* the comma means apply the following CSS declarations to all of the listed elements */
   /* Declare the maximum width and other main element rules to limit the stretch on wide views */
 }
-
-
-    
-h1, h2, h3 {
-    font-size: 150%;
-}
     
 header img{
     margin: auto;
@@ -86,6 +80,11 @@ form {
     padding-left: 0em;
 }
     
+input
+{
+    width: 75%;
+}
+    
 #chaForm {
     display: block;
     text-align: center;
@@ -113,5 +112,4 @@ iframe {
 }
     
 /* Other Class Selectors */
-    
     
