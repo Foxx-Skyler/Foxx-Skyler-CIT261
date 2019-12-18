@@ -75,14 +75,15 @@ footer {
 }
    
 form {
-    width: 100%;
+    width: 70%;
     margin: auto;
     padding-left: 0em;
 }
     
 input
 {
-    width: 75%;
+	width: 70%;
+	margin: auto;
 }
     
 #chaForm {
