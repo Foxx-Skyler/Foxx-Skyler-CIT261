@@ -1,6 +1,6 @@
 @media only screen 
 and (min-device-width : 375px) 
-and (max-device-width : 812px)
+and (max-device-width : 768px)
 { 
 
 /* This main css file contains the default rules and is geared toward the small/phone view */
@@ -18,10 +18,12 @@ header, nav, main, footer { /* the comma means apply the following CSS declarati
   /* Declare the maximum width and other main element rules to limit the stretch on wide views */
 }
 
+
+    
 h1, h2, h3 {
     font-size: 150%;
 }
-	
+    
 header img{
     margin: auto;
     width: 400px;
@@ -80,7 +82,7 @@ footer {
 form {
     width: 50%;
     margin: auto;
-    padding-left: 2em;
+    padding-left: 0em;
 }
     
 #chaForm {
@@ -106,29 +108,6 @@ iframe {
     width: 420px;
     height: 235px;
 }
-    
-/*Hamburger display*/
-
-.hamburger {
-    display: block;
-    width: 100px;
-    height: 100px;
-    margin: auto;
-
-}
-
-#ChooseProfile { list-style: none; padding-left: 0; }
-#ChooseProfile li { display: none; }
-#ChooseProfile h3 { display: none; }
-
-#ChooseMobileH3 { display: block; }
-    
-.chooseProfileMobile.responsive { position: relative; }
-.chooseProfileMobile.responsive li {font-size: 1.2em; color: #ffffff; background-color: #111111; display: block; width: 100%; margin: 2px 0px;}
-.chooseProfileMobile.responsive li a {text-align: right;  display: block; text-decoration:none; }
-.chooseProfileMobile.responsive li a:hover { color: #ffffff;}
-li a {
-color: #E93D68;
     
 }
     
