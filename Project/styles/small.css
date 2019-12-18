@@ -12,6 +12,7 @@ html,body {
 	margin-left; center;
 	padding:0px;
     display: middle;
+    font-size: 2em;
 }
 
 header, nav, main, footer { /* the comma means apply the following CSS declarations to all of the listed elements */
