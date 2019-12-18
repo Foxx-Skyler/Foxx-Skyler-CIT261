@@ -1,5 +1,7 @@
-@media only screen and (max-width: 780px) {
-  /* Only CSS rules that need to be changed to meet the layout needs from small to medium go in here */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) { 
 
 /* This main css file contains the default rules and is geared toward the small/phone view */
 
@@ -124,7 +126,7 @@ iframe {
 li a {
 color: #E93D68;
     
-    
+}
     
 /* Other Class Selectors */
     
